@@ -1,0 +1,202 @@
+/* Reset + Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* Navbar */
+nav {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+nav .logo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+    color: #e62429;
+}
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+nav ul li a:hover {
+    color: #e62429;
+}
+
+/* Header */
+header {
+    background: url('images/avengers-gif-1.gif') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+header .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: center;
+}
+header h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4rem;
+    color: #e62429;
+}
+header p {
+    font-size: 1.2rem;
+}
+
+/* Section Titles */
+section {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+section h2 {
+    font-size: 2.5rem;
+    color: #e62429;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 1.5rem;
+}
+
+/* Search */
+.search-container input {
+    width: 80%;
+    max-width: 500px;
+    padding: 0.7rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 2rem;
+}
+
+/* Hero Grid */
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+.hero-card {
+    background-color: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.hero-card:hover {
+    transform: scale(1.05);
+}
+.hero-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.hero-card h3 {
+    color: #e62429;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.hero-card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+form input,
+form textarea {
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+form button {
+    padding: 1rem;
+    background-color: #e62429;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+form button:hover {
+    background-color: #b91c1c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #111;
+    padding: 2rem;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-content {
+    background-color: rgba(17, 17, 17, 0.8); /* Semi-transparent background */
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.modal-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* Faint background */
+    z-index: -1;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover {
+    color: #fff;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Avengers Assemble</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet" />
+</head>
+<body>
+<nav>
+    <div class="logo">Avengers</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#heroes">Heroes</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<header id="home">
+    <div class="overlay">
+        <h1>Avengers Assemble</h1>
+        <p>Earth's Mightiest Heroes</p>
+    </div>
+</header>
+
+<section id="heroes">
+    <h2>Meet the Heroes</h2>
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search for a hero..." />
+    </div>
+    <div class="hero-grid" id="heroGrid">
+        <!-- Hero cards will be injected here by JavaScript -->
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<footer>
+    <p>Created by A.T Mabuza</p>
+</footer>
+
+<!-- Modal for Hero Info -->
+<div id="heroModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="bio"></div>
+        <div id="stats"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
