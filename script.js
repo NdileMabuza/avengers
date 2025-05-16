@@ -106,7 +106,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('heroModal');
     const closeBtn = document.querySelector('.close');
 
-    // Create hero cards
     Object.keys(heroData).forEach(heroKey => {
         const hero = heroData[heroKey];
         const heroCard = document.createElement('div');
@@ -120,12 +119,10 @@ document.addEventListener('DOMContentLoaded', function() {
         heroGrid.appendChild(heroCard);
     });
 
-    // Close modal
     closeBtn.addEventListener('click', () => {
         modal.style.display = 'none';
     });
 
-    // Close modal when clicking outside
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
             modal.style.display = 'none';
@@ -156,7 +153,6 @@ function showHeroInfo(heroKey) {
     ).join("")}
     `;
 
-    // Set the background image of the modal
     modalContent.style.backgroundImage = `url('images/${heroKey}.jpg')`;
 
     modal.style.display = 'block';
